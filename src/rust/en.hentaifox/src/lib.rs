@@ -183,7 +183,6 @@ fn get_page_list(_manga_id: String, chapter_id: String) -> Result<Vec<Page>> {
 
 	let mut pages: Vec<Page> = Vec::new();
 
-	\\ Need to figure out a way to pull final url image extention
 	let total = helper::numbers_only_from_string(total_pages);
 	for i in 1..=total {
 		let ext = if let Some(page_str) = json
