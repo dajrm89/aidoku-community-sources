@@ -66,7 +66,7 @@ fn get_manga_list(filters: Vec<Filter>, page: i32) -> Result<MangaPageResult> {
 		let title = a_tag.text().read();
 		let href = a_tag.attr("href").read();
 		let id = helper::get_gallery_id(href);
-		let cover = res_node.select(".inner_thumb img").attr("src").read();
+		let cover = res_node.select(".inner_thumb img").attr("data-src").read();
 		let id_str = helper::i32_to_string(id);
 
 		manga_arr.push(Manga {
